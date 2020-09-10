@@ -108,7 +108,7 @@ shinyApp(
         theme_classic()+
         xlim(0,1)+
         geom_vline(xintercept = 0.05, colour="red")+
-        ggtitle(paste0("Hedges d = ", abs(round(ef[1],digits = 2)), "Power = ", sum(p$p<0.05)/100))
+        ggtitle(paste0("Hedges d = ", abs(round(ef[1],digits = 2)), " Power = ", sum(p$p<0.05)/100))
       #+
       #   gganimate::transition_reveal(p_sim$simulation, keep_last = FALSE)
     }) 
