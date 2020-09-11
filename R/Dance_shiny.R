@@ -2,6 +2,7 @@
 library(tidyverse)
 library(effectsize)
 library(shiny)
+library(emojifont)
 
 shinyApp(
   
@@ -104,7 +105,9 @@ shinyApp(
       p_sim_sub <- p[p$simulation==input$simstep,]
       p_sim_sub %>% 
         ggplot(aes(p,simulation))+
-        geom_point(colour="blue", size=3)+
+        #geom_emoji('smile', size=10)+
+        geom_point(colour="red", size=3)+
+        geom_point(data = subset(p_sim_sub, p< 0.05), color = "green", size=3)+
         theme_classic()+
         xlim(0,1)+
         geom_vline(xintercept = 0.05, colour="red")+
