@@ -49,9 +49,9 @@ shinyApp(
                                                                              playButton = "play", pauseButton = "pause"),)
                              ),
                              plotOutput("aniplot"))
-        )
+        ),
         
-      )
+      h3("The effect size here is the standardised mean difference between two groups. The plot shows how much the two groups overlap."))
     )
   ),
   
